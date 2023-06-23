@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+xion.progressionstudios.com	TRUE	/	FALSE	1999999999	woocommerce_items_in_cart	1
+xion.progressionstudios.com	TRUE	/	FALSE	1999999999	wp_woocommerce_session_4840690c1c0ac7217352abb728827181	t_8ef5dce9ba13f90f6c97b3a22abe92%7C%7C1687671989%7C%7C1687668389%7C%7C3c4269d931c08dd986b0c32dbbd5539d
+xion.progressionstudios.com	TRUE	/	FALSE	1999999999	woocommerce_cart_hash	0ab38c9ba71faaa7a50e68ca60f817d2
+xion.progressionstudios.com	TRUE	/	FALSE	1999999999	ppwp_wp_session	eb7cbd5465da9f238a5c1d1f8b14d6ee%7C%7C1687501141%7C%7C1687500781
+
