@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SignalRChatApi.Models
 {
@@ -7,18 +8,20 @@ namespace SignalRChatApi.Models
     {
         public Message()
         {
-            MessageId = Guid.NewGuid();
             SendDate = DateTime.UtcNow;
         }
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public Guid MessageId { get; set; }
-        public int UserId { get; set; }
-        public string? ImagePath { get; set; }
-        public string? Text { get; set; }
+        public ObjectId MessageId { get; set; }
+        public int SenderId { get; set; }
+        public int ReceiverId { get; set; }
+        public string? Content { get; set; }
+        public string? Image { get; set; }
         [BsonRepresentation(BsonType.DateTime)]
-        public DateTime SendDate { get; set; } 
-        public User User { get; set; } = null!;
+        public DateTime SendDate { get; set; }
+
+        //public User Sender { get; set; } = null!; // Gönderen kullanıcı
+        //public User Receiver { get; set; } = null!; // Alan kullanıcı
         
     }
 }
