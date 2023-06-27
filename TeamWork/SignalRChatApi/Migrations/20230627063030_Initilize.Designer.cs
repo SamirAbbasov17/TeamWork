@@ -12,8 +12,8 @@ using SignalRChatApi.Data;
 namespace SignalRChatApi.Migrations
 {
     [DbContext(typeof(SignalRAppDbContext))]
-    [Migration("20230626071349_Initial")]
-    partial class Initial
+    [Migration("20230627063030_Initilize")]
+    partial class Initilize
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,6 +78,9 @@ namespace SignalRChatApi.Migrations
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("KeepLoggedIn")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("LastActive")
                         .HasColumnType("datetime2");
 
@@ -85,16 +88,11 @@ namespace SignalRChatApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Users");
                 });
@@ -112,18 +110,6 @@ namespace SignalRChatApi.Migrations
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("SignalRChatApi.Models.User", b =>
-                {
-                    b.HasOne("SignalRChatApi.Models.User", null)
-                        .WithMany("Friends")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("SignalRChatApi.Models.User", b =>
-                {
-                    b.Navigation("Friends");
                 });
 #pragma warning restore 612, 618
         }

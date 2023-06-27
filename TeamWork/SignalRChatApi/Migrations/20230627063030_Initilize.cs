@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SignalRChatApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Initilize : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,16 +37,11 @@ namespace SignalRChatApi.Migrations
                     ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastActive = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    KeepLoggedIn = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Users_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -77,11 +72,6 @@ namespace SignalRChatApi.Migrations
                 name: "IX_GroupUser_UsersId",
                 table: "GroupUser",
                 column: "UsersId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_UserId",
-                table: "Users",
-                column: "UserId");
         }
 
         /// <inheritdoc />

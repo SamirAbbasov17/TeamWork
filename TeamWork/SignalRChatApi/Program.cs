@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -18,6 +19,15 @@ namespace SignalRChatApi
                 .Build();
             
             builder.Services.AddControllers();
+
+            builder.Services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option => {
+                    option.LoginPath = "/Login/UserLogin";
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+
+                });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddDbContext<SignalRAppDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("SqlDBConnection")));
             builder.Services.AddEndpointsApiExplorer();
@@ -39,6 +49,9 @@ namespace SignalRChatApi
             }
 
             app.UseHttpsRedirection();
+
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
