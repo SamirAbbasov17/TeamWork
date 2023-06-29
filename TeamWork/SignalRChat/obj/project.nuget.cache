@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yydS20yp/t4vMHmlrsOhAtOnDW0XavB/1oqNYJpPIGJeSUpBhRRYT9rMwtyG86iSOJ0T9VQn89BOLnCHeQROpw==",
+  "dgSpecHash": "V7jiMzLE9JLWtzPYzTfVRPng8ek3P5GDxMv/0i/MQv9RifC4Kv+1BotaBb5LA+0a4QbJgcW5KB1/kPfWhSKOTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\SignalRChat.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

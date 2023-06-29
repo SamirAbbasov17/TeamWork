@@ -11,25 +11,21 @@ namespace SignalRChatApi.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
+        public DbSet<Friendship> Friendships { get; set; }
 
-        //    // Message modelini MongoDB'de saklamak için Ignore işlemi yapılır
-        //    modelBuilder.Ignore<Message>();
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Friendship>()
+                .HasOne(f => f.User)
+                .WithMany(u => u.Friendships)
+                .HasForeignKey(f => f.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-        //    // One-to-many ilişkiyi tanımlama
-        //    modelBuilder.Entity<Message>()
-        //.HasOne(m => m.Sender)
-        //.WithMany(u => u.SentMessages)
-        //.HasForeignKey(m => m.SenderId)
-        //.OnDelete(DeleteBehavior.Restrict); // Kaskat davranışını Restrict olarak güncelleyin
-
-        //    modelBuilder.Entity<Message>()
-        //        .HasOne(m => m.Receiver)
-        //        .WithMany(u => u.ReceivedMessages)
-        //        .HasForeignKey(m => m.ReceiverId)
-        //        .OnDelete(DeleteBehavior.Restrict); // Kaskat davranışını Restrict olarak güncelleyin
-        //}
+            modelBuilder.Entity<Friendship>()
+                .HasOne(f => f.Friend)
+                .WithMany()
+                .HasForeignKey(f => f.FriendId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
     }
 }

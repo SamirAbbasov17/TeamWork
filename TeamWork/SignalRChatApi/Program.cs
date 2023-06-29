@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using SignalRChatApi.Data;
+using SignalRChatApi.Hubs;
 using SignalRChatApi.Repositories;
+using SignalRChatApi.Services;
 using SignalRChatApi.Settings;
 
 namespace SignalRChatApi
@@ -17,7 +19,8 @@ namespace SignalRChatApi
                 .SetBasePath(builder.Environment.ContentRootPath)
                 .AddJsonFile("appsettings.json")
                 .Build();
-            
+
+            builder.Services.AddSignalR();
             builder.Services.AddControllers();
 
             builder.Services.AddAuthentication(
@@ -32,7 +35,9 @@ namespace SignalRChatApi
             builder.Services.AddDbContext<SignalRAppDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("SqlDBConnection")));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddTransient<IUserRepository, UserRepository>();
             builder.Services.AddTransient<IMessageRepository, MessageRepository>();
+            builder.Services.AddTransient<ISendMessageService, SendMessageService>();
             builder.Services.AddSingleton<IMongoClient>(sp =>
             {
                 var connectionString = configuration.GetConnectionString("MongoDBConnection");
@@ -54,7 +59,7 @@ namespace SignalRChatApi
             app.UseAuthentication();
 
             app.UseAuthorization();
-
+            app.MapHub<ChatHub>("/Hubs/ChatHub");
 
             app.MapControllers();
 

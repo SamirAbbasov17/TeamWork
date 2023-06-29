@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalRChatApi.Data;
 using Microsoft.AspNetCore.Authorization;
+using SignalRChatApi.Models;
 
 namespace SignalRChatApi.Controllers
 {
@@ -25,7 +26,7 @@ namespace SignalRChatApi.Controllers
         public async Task<IActionResult> GetUsers()
         {
 
-            var model = _context.Users.ToList();    
+            var model = _context.Users.ToList();
             return Ok(model);
         }
 
@@ -34,6 +35,54 @@ namespace SignalRChatApi.Controllers
         {
 
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UserUpdate(int id, string? Username, string? Email, string? Password, string? ConfirmPassword, string? img , bool KeepLoggedIn = true)
+        {
+            if(Password == null && ConfirmPassword == null )
+            {
+                User user = _context.Users.FirstOrDefault(x => x.Id == id);
+
+                user.Email = Email ?? user.Email;
+                user.Username = Username ?? user.Username;
+                user.KeepLoggedIn = KeepLoggedIn;
+                user.ImagePath = img ?? user.ImagePath;
+                user.Password = user.Password;
+
+                _context.Users.Update(user);
+                _context.SaveChanges();
+                return Ok();
+            }
+            else if (Password == ConfirmPassword)
+            {
+                User user = _context.Users.FirstOrDefault(x => x.Id == id);
+
+                
+                user.Email = Email ?? user.Email;
+                user.Password = Password ?? user.Password;
+                user.Username = Username ?? user.Username;
+                user.KeepLoggedIn = KeepLoggedIn;
+                user.ImagePath = img ?? user.ImagePath;
+
+                _context.Users.Update(user);
+                _context.SaveChanges();
+                return Ok();
+            }
+            else
+            {
+
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+           User user = _context.Users.FirstOrDefault(x => x.Id == id);
+            _context.Users.Remove(user);
+            _context.SaveChanges();
             return Ok();
         }
     }

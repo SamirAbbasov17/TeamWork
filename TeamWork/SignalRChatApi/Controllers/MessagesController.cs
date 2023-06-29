@@ -1,26 +1,29 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SignalRChatApi.Models;
 using SignalRChatApi.Repositories;
+using SignalRChatApi.Services;
 
 namespace SignalRChatApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MessagesController : ControllerBase
     {
-        private readonly IMessageRepository _messageRepository;
+        private readonly ISendMessageService _sendMessageService;
 
-        public MessagesController(IMessageRepository messageRepository)
+        public MessagesController(ISendMessageService sendMessageService)
         {
-            _messageRepository = messageRepository;
+            _sendMessageService = sendMessageService;
         }
 
         [HttpPost]
         public IActionResult CreateMessage(Message message)
         {
-            _messageRepository.SaveMessage(message);
-            return Ok();
+            var result = _sendMessageService.SendMessage(message);
+            return result ? Ok() : BadRequest();
         }
     }
 }

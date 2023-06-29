@@ -5,12 +5,180 @@
       "PackagePath": "staticwebassets\\SignalRChat.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\fonts\\MaterialIcons-Regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\fonts\\MaterialIcons-Regular.html",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\fonts\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\fonts\\MaterialIcons-Regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\MaterialIcons-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-10.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-11.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-12.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-13.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-6.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-7.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-8.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\avatar\\avatar-9.jpg",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\chat-bg.png",
+      "PackagePath": "staticwebassets\\img\\chat-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\chat-download.jpg",
+      "PackagePath": "staticwebassets\\img\\chat-download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\group-1.jpg",
+      "PackagePath": "staticwebassets\\img\\group-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\group-2.jpg",
+      "PackagePath": "staticwebassets\\img\\group-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\group-3.jpg",
+      "PackagePath": "staticwebassets\\img\\group-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\group-4.jpg",
+      "PackagePath": "staticwebassets\\img\\group-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\group-5.jpg",
+      "PackagePath": "staticwebassets\\img\\group-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\login-email.png",
+      "PackagePath": "staticwebassets\\img\\login-email.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\logo-full.png",
+      "PackagePath": "staticwebassets\\img\\logo-full.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\otp-bg.png",
+      "PackagePath": "staticwebassets\\img\\otp-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\signup-email.png",
+      "PackagePath": "staticwebassets\\img\\signup-email.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\status-icon.png",
+      "PackagePath": "staticwebassets\\img\\status-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\status1.jpg",
+      "PackagePath": "staticwebassets\\img\\status1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\top-curve-bg.html",
+      "PackagePath": "staticwebassets\\img\\top-curve-bg.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\img\\vidio-call-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\vidio-call-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\jquery.nicescroll.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nicescroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\js\\site.js",
@@ -243,6 +411,118 @@
     {
       "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fancybox\\jquery.fancybox.min.css",
+      "PackagePath": "staticwebassets\\plugins\\fancybox\\jquery.fancybox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fancybox\\jquery.fancybox.min.js",
+      "PackagePath": "staticwebassets\\plugins\\fancybox\\jquery.fancybox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400.html",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400.html",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900.html",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\plugins\\fontawesome\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\mcustomscroll\\jquery.mCustomScrollbar.css",
+      "PackagePath": "staticwebassets\\plugins\\mcustomscroll\\jquery.mCustomScrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\mcustomscroll\\jquery.mCustomScrollbar.js",
+      "PackagePath": "staticwebassets\\plugins\\mcustomscroll\\jquery.mCustomScrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\mcustomscroll\\mCSB_buttons.html",
+      "PackagePath": "staticwebassets\\plugins\\mcustomscroll\\mCSB_buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\slimscroll\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\plugins\\slimscroll\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\swiper\\swiper.min.css",
+      "PackagePath": "staticwebassets\\plugins\\swiper\\swiper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChat\\wwwroot\\plugins\\swiper\\swiper.min.js",
+      "PackagePath": "staticwebassets\\plugins\\swiper\\swiper.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.SignalRChat.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -20,8 +20,5 @@ namespace SignalRChatApi.Models
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime SendDate { get; set; }
 
-        //public User Sender { get; set; } = null!; // Gönderen kullanıcı
-        //public User Receiver { get; set; } = null!; // Alan kullanıcı
-        
     }
 }

@@ -21,7 +21,7 @@ namespace SignalRChatApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserLogin(string Email, string Password , bool KeepLoggedIn)
+        public async Task<IActionResult> UserLogin(string Email, string Password, bool KeepLoggedIn)
         {
             ClaimsPrincipal claimUser = HttpContext.User;
 
@@ -59,6 +59,29 @@ namespace SignalRChatApi.Controllers
                 return Ok();
             }
             return BadRequest();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> UserRegister(string Username, string Email, string Password , string ConfirmPassword)
+        {
+            if (Password == ConfirmPassword)
+            {
+                User user = new()
+                {
+                    Email = Email,
+                    Password = Password,
+                    Username = Username,
+                    KeepLoggedIn = true,
+                };
+                _context.Users.Add(user);
+                _context.SaveChanges();
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
     }
 }

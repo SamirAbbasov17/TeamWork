@@ -29,3 +29,6 @@ C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\refint\Sign
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\SignalRChat.pdb
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\SignalRChat.genruntimeconfig.cache
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\ref\SignalRChat.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\libman.json
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\SignalRChat.csproj.CopyComplete

@@ -12,7 +12,7 @@ using SignalRChatApi.Data;
 namespace SignalRChatApi.Migrations
 {
     [DbContext(typeof(SignalRAppDbContext))]
-    [Migration("20230627063030_Initilize")]
+    [Migration("20230629082753_Initilize")]
     partial class Initilize
     {
         /// <inheritdoc />
@@ -38,6 +38,29 @@ namespace SignalRChatApi.Migrations
                     b.HasIndex("UsersId");
 
                     b.ToTable("GroupUser");
+                });
+
+            modelBuilder.Entity("SignalRChatApi.Models.Friendship", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("FriendId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FriendId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Friendships");
                 });
 
             modelBuilder.Entity("SignalRChatApi.Models.Group", b =>
@@ -81,9 +104,6 @@ namespace SignalRChatApi.Migrations
                     b.Property<bool>("KeepLoggedIn")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastActive")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -110,6 +130,28 @@ namespace SignalRChatApi.Migrations
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("SignalRChatApi.Models.Friendship", b =>
+                {
+                    b.HasOne("SignalRChatApi.Models.User", "Friend")
+                        .WithMany()
+                        .HasForeignKey("FriendId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("SignalRChatApi.Models.User", "User")
+                        .WithMany("Friendships")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Friend");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("SignalRChatApi.Models.User", b =>
+                {
+                    b.Navigation("Friendships");
                 });
 #pragma warning restore 612, 618
         }
