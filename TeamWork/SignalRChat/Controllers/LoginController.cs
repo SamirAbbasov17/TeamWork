@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SignalRChat.Models;
 using System.Net.Http.Json;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
 
@@ -19,24 +22,56 @@ namespace SignalRChat.Controllers
         [HttpGet]
         public IActionResult UserLogin()
         {
+            ClaimsPrincipal claimUser = HttpContext.User;
+
+            if (claimUser.Identity.IsAuthenticated)
+            {
+
+                //HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                return RedirectToAction("Index", "Chat");
+            }
+
             return View();
         }
 
         [HttpPost]
-        public  async Task<IActionResult> UserLogin(LoginModel loginModel)
+        public IActionResult UserLogin(LoginModel loginModel)
         {
+         
             string api = "https://localhost:7202/api/Login/UserLogin";
             var jsonContent = new StringContent(JsonConvert.SerializeObject(loginModel), Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync(api, jsonContent);
+            var response = _httpClient.PostAsync(api, jsonContent).Result;
+
+
+           
+
             if (response.IsSuccessStatusCode)
             {
+                List<Claim> claims = new List<Claim>() {
+                    new Claim(ClaimTypes.NameIdentifier, loginModel.Email),
+                    new Claim("OtherProperties","Example Role")
+
+                };
+
+                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
+                    CookieAuthenticationDefaults.AuthenticationScheme);
+
+                AuthenticationProperties properties = new AuthenticationProperties()
+                {
+
+                    AllowRefresh = true,
+                    IsPersistent = loginModel.KeepLogedIn
+                };
+
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity), properties);
                 return RedirectToAction("Index","Chat");
             }
             else
             {
                 // Kayıt başarısız oldu, hata işleyin
-                var errorResponse = await response.Content.ReadAsStringAsync();
-                ModelState.AddModelError("", errorResponse);
+                //var errorResponse = response.Content.ReadAsStringAsync();
+                //ModelState.AddModelError("", errorResponse);
                 return View(loginModel);
             }
         }

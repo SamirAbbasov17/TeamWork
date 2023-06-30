@@ -6,6 +6,7 @@ using System.Security.Claims;
 using SignalRChatApi.Models;
 using SignalRChatApi.Data;
 using Microsoft.AspNetCore.Authorization;
+using SignalRChatApi.Dtos;
 
 namespace SignalRChatApi.Controllers
 {
@@ -21,7 +22,7 @@ namespace SignalRChatApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserLogin(string Email, string Password, bool KeepLoggedIn)
+        public async Task<IActionResult> UserLogin(UserLoginDto userLogin)
         {
             ClaimsPrincipal claimUser = HttpContext.User;
 
@@ -32,29 +33,29 @@ namespace SignalRChatApi.Controllers
 
 
 
-            var user = _context.Users.FirstOrDefault(u => u.Email == Email && u.Password == Password);
+            var user = _context.Users.FirstOrDefault(u => u.Email == userLogin.Email && u.Password == userLogin.Password);
 
 
             if (user != null)
             {
-                List<Claim> claims = new List<Claim>() {
-                    new Claim(ClaimTypes.NameIdentifier, Email),
-                    new Claim("OtherProperties","Example Role")
+                //List<Claim> claims = new List<Claim>() {
+                //    new Claim(ClaimTypes.NameIdentifier, userLogin.Email),
+                //    new Claim("OtherProperties","Example Role")
 
-                };
+                //};
 
-                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
-                    CookieAuthenticationDefaults.AuthenticationScheme);
+                //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
+                //    CookieAuthenticationDefaults.AuthenticationScheme);
 
-                AuthenticationProperties properties = new AuthenticationProperties()
-                {
+                //AuthenticationProperties properties = new AuthenticationProperties()
+                //{
 
-                    AllowRefresh = true,
-                    IsPersistent = KeepLoggedIn
-                };
+                //    AllowRefresh = true,
+                //    IsPersistent = userLogin.KeepLogedIn
+                //};
 
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(claimsIdentity), properties);
+                //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                //    new ClaimsPrincipal(claimsIdentity), properties);
 
                 return Ok();
             }
@@ -63,15 +64,15 @@ namespace SignalRChatApi.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> UserRegister(string Username, string Email, string Password , string ConfirmPassword)
+        public async Task<IActionResult> UserRegister(UserRegisterDto userRegister)
         {
-            if (Password == ConfirmPassword)
+            if (userRegister.Password == userRegister.ConfirmPassword)
             {
                 User user = new()
                 {
-                    Email = Email,
-                    Password = Password,
-                    Username = Username,
+                    Email = userRegister.Email,
+                    Password = userRegister.Password,
+                    Username = userRegister.Username,
                     KeepLoggedIn = true,
                 };
                 _context.Users.Add(user);

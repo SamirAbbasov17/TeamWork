@@ -27,8 +27,6 @@ namespace SignalRChatApi
                 CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(option => {
                     option.LoginPath = "/Login/UserLogin";
-                    option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-
                 });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
