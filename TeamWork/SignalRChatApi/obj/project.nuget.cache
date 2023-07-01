@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uTz0YjFoPfOV0BbVCbQpN9ZCXHfmxWl8JkQimv1FLRCmT6jgwjIzSwp8m/BXpYS5ZCkkHoOPY8H6XGQm4slfhw==",
+  "dgSpecHash": "6VWmgG6mREI3+Zds8XN3EUm2qsilbhxiJ1o5vrJ9Dia2cliKdwv5fV8ZAZfb9TuzrhlmS+MGw2XnFgscJfuOKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\TeamWork\\TeamWork\\SignalRChatApi\\SignalRChatApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\User\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.8\\microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.8\\microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

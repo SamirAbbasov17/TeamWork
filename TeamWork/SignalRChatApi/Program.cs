@@ -1,12 +1,14 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using SignalRChatApi.Data;
 using SignalRChatApi.Hubs;
 using SignalRChatApi.Repositories;
 using SignalRChatApi.Services;
 using SignalRChatApi.Settings;
+using System.Text;
 
 namespace SignalRChatApi
 {
@@ -21,13 +23,27 @@ namespace SignalRChatApi
                 .Build();
 
             builder.Services.AddSignalR();
-            builder.Services.AddControllers();
 
-            builder.Services.AddAuthentication(
-                CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(option => {
-                    option.LoginPath = "/Login/UserLogin";
-                });
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                      .AddCookie(options =>
+                      {
+                          options.LoginPath = "/api/Login/UserLogin";
+                          options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+                      })
+                      .AddJwtBearer(options =>
+                      {
+                          options.TokenValidationParameters = new TokenValidationParameters
+                          {
+                              ValidateIssuer = true,
+                              ValidateAudience = true,
+                              ValidateLifetime = true,
+                              ValidateIssuerSigningKey = true,
+                              ValidIssuer = "Teamwork",
+                              ValidAudience = "SignalRChatApi",
+                              IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this_is_a_long_secret_key_123456789"))
+                          };
+                      });
+            builder.Services.AddControllers();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddDbContext<SignalRAppDbContext>(option => option.UseSqlServer(configuration.GetConnectionString("SqlDBConnection")));

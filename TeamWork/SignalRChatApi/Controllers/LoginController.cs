@@ -7,6 +7,9 @@ using SignalRChatApi.Models;
 using SignalRChatApi.Data;
 using Microsoft.AspNetCore.Authorization;
 using SignalRChatApi.Dtos;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 
 namespace SignalRChatApi.Controllers
 {
@@ -22,7 +25,7 @@ namespace SignalRChatApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserLogin(UserLoginDto userLogin)
+        public async Task<IActionResult> UserLogin(UserLoginDto loginDto)
         {
             ClaimsPrincipal claimUser = HttpContext.User;
 
@@ -31,48 +34,45 @@ namespace SignalRChatApi.Controllers
                 return BadRequest("Istifadeci login olmusdur");
             }
 
-
-
-            var user = _context.Users.FirstOrDefault(u => u.Email == userLogin.Email && u.Password == userLogin.Password);
-
+            var user = _context.Users.FirstOrDefault(u => u.Email == loginDto.Email && u.Password == loginDto.Password);
 
             if (user != null)
             {
-                //List<Claim> claims = new List<Claim>() {
-                //    new Claim(ClaimTypes.NameIdentifier, userLogin.Email),
-                //    new Claim("OtherProperties","Example Role")
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes("this_is_a_long_secret_key_123456789");
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new[]
+                    {
+                        new Claim(ClaimTypes.NameIdentifier, loginDto.Email),
+                        new Claim("OtherProperties", "Example Role")
+                    }),
+                    //Expires = DateTime.UtcNow.AddHours(1),
+                    
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
+                };
+                
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                var jwt = tokenHandler.WriteToken(token);
 
-                //};
-
-                //ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
-                //    CookieAuthenticationDefaults.AuthenticationScheme);
-
-                //AuthenticationProperties properties = new AuthenticationProperties()
-                //{
-
-                //    AllowRefresh = true,
-                //    IsPersistent = userLogin.KeepLogedIn
-                //};
-
-                //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                //    new ClaimsPrincipal(claimsIdentity), properties);
-
-                return Ok();
+                return Ok(jwt);
             }
+
             return BadRequest();
         }
 
 
+
         [HttpPost]
-        public async Task<IActionResult> UserRegister(UserRegisterDto userRegister)
+        public async Task<IActionResult> UserRegister(UserRegisterDto userRegisterDto)
         {
-            if (userRegister.Password == userRegister.ConfirmPassword)
+            if (userRegisterDto.Password == userRegisterDto.ConfirmPassword)
             {
                 User user = new()
                 {
-                    Email = userRegister.Email,
-                    Password = userRegister.Password,
-                    Username = userRegister.Username,
+                    Email = userRegisterDto.Email,
+                    Password = userRegisterDto.Password,
+                    Username = userRegisterDto.Username,
                     KeepLoggedIn = true,
                 };
                 _context.Users.Add(user);

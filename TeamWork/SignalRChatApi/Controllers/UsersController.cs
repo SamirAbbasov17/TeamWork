@@ -10,7 +10,6 @@ namespace SignalRChatApi.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize]
     public class UsersController : ControllerBase
     {
 

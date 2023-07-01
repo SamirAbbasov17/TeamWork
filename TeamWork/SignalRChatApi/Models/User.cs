@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SignalRChatApi.Models
 {
@@ -16,6 +17,7 @@ namespace SignalRChatApi.Models
         public string? ImagePath { get; set; }
         public ICollection<Group>? Groups { get; set; }
         public DateTime CreatedAt { get; set; }
+        [NotMapped]
         public bool KeepLoggedIn { get; set; }
         public ICollection<Friendship> Friendships { get; set; }
 

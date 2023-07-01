@@ -87,3 +87,4 @@ C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChatApi\obj\Debug\net7.0\SignalRC
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChatApi\obj\Debug\net7.0\SignalRChatApi.genruntimeconfig.cache
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChatApi\obj\Debug\net7.0\ref\SignalRChatApi.dll
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChatApi\bin\Debug\net7.0\MongoDB.Driver.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChatApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

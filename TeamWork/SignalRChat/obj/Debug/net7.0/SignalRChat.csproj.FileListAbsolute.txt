@@ -32,3 +32,8 @@ C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\ref\SignalR
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\libman.json
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\obj\Debug\net7.0\SignalRChat.csproj.CopyComplete
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Desktop\TeamWork\TeamWork\SignalRChat\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

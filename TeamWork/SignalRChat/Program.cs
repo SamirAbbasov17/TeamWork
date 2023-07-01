@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace SignalRChat
 {
@@ -9,15 +9,14 @@ namespace SignalRChat
             var builder = WebApplication.CreateBuilder(args);
         
             // Add services to the container.
+
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.LoginPath = "/Login/UserLogin"; // MVC projesindeki LoginController'ın UserLogin aksiyonunun yolunu buraya yazın
+            });
             builder.Services.AddControllersWithViews();
-
-            builder.Services.AddAuthentication(
-                CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(option => {
-                    option.LoginPath = "/Login/UserLogin";
-                    option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-
-                });
             builder.Services.AddHttpClient();
             var app = builder.Build();
 

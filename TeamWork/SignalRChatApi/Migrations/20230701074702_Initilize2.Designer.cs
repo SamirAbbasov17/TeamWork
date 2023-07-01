@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SignalRChatApi.Data;
 
@@ -11,9 +12,11 @@ using SignalRChatApi.Data;
 namespace SignalRChatApi.Migrations
 {
     [DbContext(typeof(SignalRAppDbContext))]
-    partial class SignalRAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230701074702_Initilize2")]
+    partial class Initilize2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
